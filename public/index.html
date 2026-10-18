@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0718">
+  <title>POLYGON | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#overview">⬡ <span>POLYGON</span></a>
+
+    <div class="profile">
+      <div class="avatar">P</div>
+      <div>
+        <strong>Welcome, Member</strong>
+        <small>Account Preview</small>
+      </div>
+    </div>
+
+    <p class="menu-label">MAIN MENU</p>
+
+    <nav class="side-menu">
+      <a href="#overview" class="active">▦ <span>Dashboard</span></a>
+      <a href="#products">◇ <span>Products</span></a>
+      <a href="#referral">♧ <span>Referral</span></a>
+      <a href="#transactions">▤ <span>Transactions</span></a>
+      <a href="#deposit">＋ <span>Deposit</span></a>
+      <a href="#withdraw">↗ <span>Withdraw</span></a>
+      <a href="#support">✉ <span>Support</span></a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <span class="status-dot"></span> Preview Mode
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <div>
+        <span class="eyebrow">YOUR DIGITAL SPACE</span>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="top-profile">P</div>
+    </header>
+
+    <section class="welcome" id="overview">
+      <div>
+        <span class="badge">✦ POLYGON PLATFORM</span>
+        <h1>Welcome to <span>POLYGON</span></h1>
+        <p>Manage your platform experience from one place.</p>
+        <small>BE TRUSTFULL TO USE POLYGON</small>
+      </div>
+      <div class="welcome-symbol">⬡</div>
+    </section>
+
+    <div class="notice">
+      <span>ⓘ</span>
+      <p><strong>Preview Mode:</strong> This dashboard uses sample information. No real deposits, withdrawals or rewards are processed.</p>
+    </div>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR ACCOUNT</span>
+          <h2>Account Overview</h2>
+        </div>
+        <span class="pill">DEMO</span>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon">◈</div>
+          <p>Available Balance</p>
+          <h3>— USDT</h3>
+          <small>Not connected</small>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">◇</div>
+          <p>Active Products</p>
+          <h3>0</h3>
+          <small>Preview account</small>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">♧</div>
+          <p>Referrals</p>
+          <h3>0</h3>
+          <small>No referral data</small>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon">▤</div>
+          <p>Transactions</p>
+          <h3>0</h3>
+          <small>No transactions</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">EXPLORE</span>
+          <h2>Products & Services</h2>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <article class="content-card product-card">
+          <div class="card-icon">◇</div>
+          <div class="card-copy">
+            <span class="eyebrow">PRODUCT 01</span>
+            <h3>POLYGON Rewards</h3>
+            <p>Explore product details, eligibility requirements and applicable reward terms before participating.</p>
+            <p><strong>Status:</strong> Not activated</p>
+            <button class="outline-button" type="button" data-message="POLYGON Rewards are not active. No purchase or reward has been processed.">View Details ↗</button>
+          </div>
+        </article>
+
+        <article class="content-card product-card">
+          <div class="card-icon">♧</div>
+          <div class="card-copy">
+            <span class="eyebrow">PRODUCT 02</span>
+            <h3>Referral Programme</h3>
+            <p>Get your referral link and share it. Referral tracking and rewards require a verified account and active backend.</p>
+            <p><strong>Status:</strong> Link preview available</p>
+            <button class="outline-button" type="button" data-message="Open the Referral Centre from the sidebar to view and copy your referral link.">Explore Referral ↗</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" id="referral">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">COMMUNITY</span>
+          <h2>Referral Centre</h2>
+        </div>
+      </div>
+
+      <div class="content-card referral-card">
+        <div class="card-icon">♧</div>
+        <div class="card-copy">
+          <h3>Your Referral Link</h3>
+          <p>Share your referral link with friends. Referral tracking will be available after backend activation.</p>
+          <label for="referralLink">Referral link</label>
+          <input id="referralLink" type="text" readonly value="Generating link..." style="width:100%;box-sizing:border-box;margin-top:10px;padding:12px;border-radius:10px;border:1px solid #6841a5;background:#130d22;color:#ffffff;">
+          <button class="outline-button" id="copyReferralLink" type="button" style="margin-top:12px;">Copy Referral Link</button>
+          <p id="referralMessage" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="transactions">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">ACTIVITY</span>
+          <h2>Recent Transactions</h2>
+        </div>
+      </div>
+
+      <div class="content-card transaction-empty">
+        <div class="empty-icon">▤</div>
+        <h3>No transactions to show</h3>
+        <p>Your transaction history will appear here when the appropriate service is implemented.</p>
+      </div>
+    </section>
+
+    <section class="section-block" id="deposit">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FUNDS</span>
+          <h2>Deposit</h2>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div>
+          <h3>Add Funds</h3>
+          <p>USDT deposit service is not connected.</p>
+        </div>
+        <button class="primary-button" data-message="Deposits are disabled in preview mode. No funds have been requested or received.">Deposit Unavailable</button>
+      </div>
+    </section>
+
+    <section class="section-block" id="withdraw">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FUNDS</span>
+          <h2>Withdraw</h2>
+        </div>
+      </div>
+
+      <div class="action-card">
+        <div>
+          <h3>Withdrawal Centre</h3>
+          <p>Withdrawals require a secure backend and verified transaction processing.</p>
+        </div>
+        <button class="primary-button" data-message="Withdrawals are disabled in preview mode. No transaction has been created.">Withdraw Unavailable</button>
+      </div>
+    </section>
+
+    <section class="section-block" id="support">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">WE ARE HERE TO HELP</span>
+          <h2>Customer Support</h2>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="card-icon">✉</div>
+        <div class="card-copy">
+          <h3>Contact Support</h3>
+          <p>amansharma16003@gmail.com</p>
+          <small>9 AM–5 PM (GMT+7)</small>
+        </div>
+        <a class="outline-button" href="mailto:amansharma16003@gmail.com">Email Us ↗</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a class="brand" href="#overview">⬡ POLYGON</a>
+      <p>BE TRUSTFULL TO USE POLYGON</p>
+      <small>Frontend preview only. Financial features are not active.</small>
+      <small>© <span id="year">2026</span> POLYGON</small>
+    </footer>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
